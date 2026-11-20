@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "If you use this workflow or code in your research, please cite it as below."
+type: software
+title: "cancer-cohort-wgcna-survival: Reproducible R/Bioconductor workflow for cancer cohort DE, WGCNA, GSEA, and survival modeling"
+version: 0.1.0
+date-released: 2026-11-20
+license: MIT
+url: "https://arjunbioinfo.github.io/"
+repository-code: "https://github.com/arjunbioinfo/cancer-cohort-wgcna-survival"
+authors:
+  - family-names: "Thippana"
+    given-names: "Mallikarjuna"
+    affiliation: "Department of Oncology-Pathology, Karolinska Institutet"
+    orcid: "https://orcid.org/0000-0001-8485-8626"
+keywords:
+  - bioinformatics
+  - cancer-genomics
+  - TCGA
+  - WGCNA
+  - limma
+  - fgsea
+  - survival-analysis
+  - Bioconductor
+  - R
+abstract: >-
+  A config-driven R/Bioconductor pipeline integrating limma differential expression,
+  signed WGCNA co-expression module detection, fgsea cancer pathway enrichment, and
+  Cox proportional hazards / Kaplan-Meier overall survival modeling on public TCGA
+  cohorts via UCSC Xena.

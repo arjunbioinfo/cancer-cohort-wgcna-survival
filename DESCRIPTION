@@ -1,0 +1,23 @@
+Package: cancerCohortWgcnaSurvival
+Title: Reproducible Cancer Cohort Differential Expression, WGCNA, GSEA, and Survival Analysis
+Version: 0.1.0
+Description: Config-driven R/Bioconductor workflow for bulk cancer transcriptomics
+    combining limma differential expression, WGCNA co-expression modules, fgsea
+    pathway enrichment, and Cox/Kaplan-Meier overall survival modeling on TCGA-CESC.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Imports:
+    data.table,
+    dplyr,
+    fgsea,
+    ggplot2,
+    jsonlite,
+    limma,
+    patchwork,
+    survival,
+    tidyr,
+    WGCNA,
+    yaml
+Suggests:
+    testthat
+biocViews: DifferentialExpression, GeneExpression, Survival, NetworkInference
