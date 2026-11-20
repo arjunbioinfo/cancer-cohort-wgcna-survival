@@ -3,9 +3,9 @@
 
 cohort:
   name: "TCGA-CESC"
-  expr_url: "https://tcga-xena-hub.s3.us-east-1.amazonaws.com/download/TCGA.CESC.sampleMap%2FHiSeqV2.gz"
-  survival_url: "https://tcga-xena-hub.s3.us-east-1.amazonaws.com/download/survival%2FCESC_survival.txt"
-  clinical_url: "https://tcga-xena-hub.s3.us-east-1.amazonaws.com/download/TCGA.CESC.sampleMap%2FCESC_clinicalMatrix"
+  expr_url: "https://tcga.xenahubs.net/download/TCGA.CESC.sampleMap/HiSeqV2.gz"
+  survival_url: "https://tcga.xenahubs.net/download/survival/CESC_survival.txt"
+  clinical_url: "https://tcga.xenahubs.net/download/TCGA.CESC.sampleMap/CESC_clinicalMatrix"
 
 de:
   min_mean_expr: 1.0
