@@ -1,0 +1,40 @@
+# Fast CI configuration: real public TCGA-CESC cohort via UCSC Xena
+# Uses top 1,200 MAD genes for fast WGCNA (~20-30s on GitHub Actions)
+
+cohort:
+  name: "TCGA-CESC"
+  expr_url: "https://tcga-xena-hub.s3.us-east-1.amazonaws.com/download/TCGA.CESC.sampleMap%2FHiSeqV2.gz"
+  survival_url: "https://tcga-xena-hub.s3.us-east-1.amazonaws.com/download/survival%2FCESC_survival.txt"
+  clinical_url: "https://tcga-xena-hub.s3.us-east-1.amazonaws.com/download/TCGA.CESC.sampleMap%2FCESC_clinicalMatrix"
+
+de:
+  min_mean_expr: 1.0
+  padj_threshold: 0.05
+  lfc_threshold: 0.5
+
+wgcna:
+  top_mad_genes: 1200
+  min_module_size: 25
+  merge_cut_height: 0.25
+  r2_target: 0.80
+  fallback_power: 6
+
+survival:
+  min_os_days: 30
+  top_hub_genes_per_module: 10
+
+plotting:
+  highlight_genes:
+    - "MCM5"
+    - "FN1"
+    - "KIF11"
+    - "CDC45"
+    - "CDH2"
+    - "MYC"
+
+random_seed: 42
+
+output_dirs:
+  data: "data/raw"
+  results: "results"
+  figures: "figures"
