@@ -71,9 +71,9 @@ plot_wgcna_module_traits <- function(wgcna_res, out_path) {
     geom_hline(yintercept = 0.80, linetype = "dashed", color = "#D95F02") +
     geom_vline(xintercept = wgcna_res$soft_power, linetype = "dotted", color = "#1B9E77") +
     labs(
-      title = sprintf("WGCNA Soft-Thresholding (selected β = %d)", wgcna_res$soft_power),
-      x = "Soft-thresholding power (β)",
-      y = "Signed Scale-Free Topology R²"
+      title = sprintf("WGCNA Soft-Thresholding (selected \u03b2 = %d)", wgcna_res$soft_power),
+      x = "Soft-thresholding power (\u03b2)",
+      y = "Signed Scale-Free Topology R\u00b2"
     ) +
     theme_minimal(base_size = 11) +
     theme(plot.title = element_text(face = "bold"))
@@ -89,7 +89,7 @@ plot_wgcna_module_traits <- function(wgcna_res, out_path) {
     geom_text(aes(label = label), size = 2.7, color = "#111111") +
     scale_fill_gradient2(low = "#1B9E77", mid = "white", high = "#D95F02", midpoint = 0, limits = c(-1, 1)) +
     labs(
-      title = "Module Eigengene–Clinical Trait Correlations",
+      title = "Module Eigengene\u2013Clinical Trait Correlations",
       x = NULL,
       y = NULL,
       fill = "Pearson r"
@@ -156,7 +156,7 @@ plot_survival_forest_km <- function(meta, wgcna_res, surv_res, out_path) {
     annotate("text", x = max(km_plot_df$time) * 0.65, y = 0.18,
              label = sprintf("Log-rank p = %.3g", km_p), fontface = "bold", size = 3.6) +
     labs(
-      title = sprintf("Kaplan–Meier Overall Survival (%s)", top_mod),
+      title = sprintf("Kaplan\u2013Meier Overall Survival (%s)", top_mod),
       x = "Overall Survival (years)",
       y = "Survival Probability",
       color = NULL, fill = NULL
