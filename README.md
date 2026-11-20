@@ -2,6 +2,7 @@
 
 [![CI](https://github.com/arjunbioinfo/cancer-cohort-wgcna-survival/actions/workflows/ci.yml/badge.svg)](https://github.com/arjunbioinfo/cancer-cohort-wgcna-survival/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Software DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24392053.svg)](https://doi.org/10.5281/zenodo.24392053)
 
 A reproducible, config-driven **R / Bioconductor** workflow for bulk cancer cohort transcriptomics combining **limma** empirical Bayes differential expression, **WGCNA** signed co-expression modules, **fgsea** cancer pathway enrichment, and **Cox proportional hazards + Kaplan–Meier** overall survival modeling.
 
