@@ -14,6 +14,7 @@ Imports:
     jsonlite,
     limma,
     patchwork,
+    R.utils,
     survival,
     tidyr,
     WGCNA,
