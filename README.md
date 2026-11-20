@@ -15,6 +15,19 @@ Every push runs offline `testthat` unit tests and executes the full workflow on 
 4. **Survival Modeling (`R/04_survival_cox_km.R`)**: Runs univariate and stage-adjusted multivariate Cox proportional hazards regression (`survival::coxph`) plus median-split Kaplan–Meier log-rank tests (`survival::survdiff`) on every WGCNA module eigengene and top intramodular hub genes.
 5. **Visualization (`R/05_plot_summary.R`)**: Exports four 300 DPI `ggplot2` / `patchwork` summary figures in `figures/`.
 
+## Example outputs (CI profile, TCGA-CESC)
+
+272 primary tumours with at least 30 days of follow-up (70 deaths); WGCNA on the 1,200 most variable genes.
+
+![WGCNA soft-threshold and module–trait correlations](figures/wgcna_module_trait_heatmap.png)
+![Cox hazard ratios per module and Kaplan–Meier curves for the top module](figures/survival_forest_km.png)
+
+* **Differential expression:** no single gene reaches FDR < 0.05 between advanced (III–IV) and early (I–II) stage.
+* **Pathway enrichment** (fgsea, pre-ranked on the limma t-statistic): glycolysis/hypoxia (NES 2.56), keratinisation, MYC targets and EMT are higher in advanced tumours, and immune/interferon genes lower (all adjusted p < 0.05). The gene sets are small curated lists (about 20 genes each), not MSigDB collections.
+* **Survival:** of five co-expression modules, only the yellow module (56 genes) is associated with overall survival: Cox HR 0.71 (95% CI 0.57–0.89), FDR 0.017; the stage-adjusted HR is unchanged, and the median-split Kaplan–Meier log-rank p is 0.0004.
+
+These are exploratory results from one cohort and need validation in an independent dataset before any biological claim.
+
 ## Quick Start
 
 ```bash
